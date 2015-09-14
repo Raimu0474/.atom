@@ -1,0 +1,21 @@
+"*":
+  "exception-reporting":
+    userId: "ba541420-9903-96d3-aac2-94dac0a65447"
+  welcome:
+    showOnStartup: false
+  core:
+    themes: [
+      "seti-ui"
+      "seti-syntax"
+    ]
+  editor:
+    invisibles: {}
+  minimap:
+    plugins:
+      "git-diff": true
+      linter: true
+      "minimap-hide": true
+      pigments: true
+      "minimap-autohide": true
+      "highlight-selected": true
+  linter: {}
