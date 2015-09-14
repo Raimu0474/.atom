@@ -1,0 +1,32 @@
+(function() {
+  var git, gitStashApply, notifier;
+
+  git = require('../git');
+
+  notifier = require('../notifier');
+
+  gitStashApply = function(repo) {
+    return git.cmd({
+      args: ['stash', 'apply'],
+      cwd: repo.getWorkingDirectory(),
+      options: {
+        env: process.env.NODE_ENV
+      },
+      stdout: function(data) {
+        if (data.toString().length > 0) {
+          return notifier.addSuccess(data);
+        }
+      },
+      stderr: function(data) {
+        return notifier.addError(data.toString());
+      }
+    });
+  };
+
+  module.exports = gitStashApply;
+
+}).call(this);
+
+//# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAiZmlsZSI6ICIiLAogICJzb3VyY2VSb290IjogIiIsCiAgInNvdXJjZXMiOiBbCiAgICAiQzpcXFVzZXJzXFx4MTNnMDMzXFwuYXRvbVxccGFja2FnZXNcXGdpdC1wbHVzXFxsaWJcXG1vZGVsc1xcZ2l0LXN0YXNoLWFwcGx5LmNvZmZlZSIKICBdLAogICJuYW1lcyI6IFtdLAogICJtYXBwaW5ncyI6ICJBQUFBO0FBQUEsTUFBQSw0QkFBQTs7QUFBQSxFQUFBLEdBQUEsR0FBTSxPQUFBLENBQVEsUUFBUixDQUFOLENBQUE7O0FBQUEsRUFDQSxRQUFBLEdBQVcsT0FBQSxDQUFRLGFBQVIsQ0FEWCxDQUFBOztBQUFBLEVBR0EsYUFBQSxHQUFnQixTQUFDLElBQUQsR0FBQTtXQUNkLEdBQUcsQ0FBQyxHQUFKLENBQ0U7QUFBQSxNQUFBLElBQUEsRUFBTSxDQUFDLE9BQUQsRUFBVSxPQUFWLENBQU47QUFBQSxNQUNBLEdBQUEsRUFBSyxJQUFJLENBQUMsbUJBQUwsQ0FBQSxDQURMO0FBQUEsTUFFQSxPQUFBLEVBQVM7QUFBQSxRQUNQLEdBQUEsRUFBSyxPQUFPLENBQUMsR0FBRyxDQUFDLFFBRFY7T0FGVDtBQUFBLE1BS0EsTUFBQSxFQUFRLFNBQUMsSUFBRCxHQUFBO0FBQ04sUUFBQSxJQUE2QixJQUFJLENBQUMsUUFBTCxDQUFBLENBQWUsQ0FBQyxNQUFoQixHQUF5QixDQUF0RDtpQkFBQSxRQUFRLENBQUMsVUFBVCxDQUFvQixJQUFwQixFQUFBO1NBRE07TUFBQSxDQUxSO0FBQUEsTUFPQSxNQUFBLEVBQVEsU0FBQyxJQUFELEdBQUE7ZUFDTixRQUFRLENBQUMsUUFBVCxDQUFrQixJQUFJLENBQUMsUUFBTCxDQUFBLENBQWxCLEVBRE07TUFBQSxDQVBSO0tBREYsRUFEYztFQUFBLENBSGhCLENBQUE7O0FBQUEsRUFlQSxNQUFNLENBQUMsT0FBUCxHQUFpQixhQWZqQixDQUFBO0FBQUEiCn0=
+
+//# sourceURL=/C:/Users/x13g033/.atom/packages/git-plus/lib/models/git-stash-apply.coffee
