@@ -8,6 +8,9 @@
       "seti-ui"
       "seti-syntax"
     ]
+    disabledPackages: [
+      "tag"
+    ]
   editor:
     invisibles: {}
   minimap:
@@ -19,3 +22,5 @@
       "minimap-autohide": true
       "highlight-selected": true
   linter: {}
+  "atom-beautify":
+    _analyticsUserId: "5342b7d4-c44a-4d86-8e0f-5b02ab85390a"

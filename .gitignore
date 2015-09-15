@@ -4,3 +4,5 @@
 packages/
 storage/
 compile-cache/
+init.coffee
+styles.less
