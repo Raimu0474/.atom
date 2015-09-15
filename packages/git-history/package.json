@@ -31,8 +31,8 @@
   "homepage": "https://github.com/jakesankey/git-history#readme",
   "_id": "git-history@3.1.0",
   "_shasum": "956e6884d8d6e5ca8ed301d765494519e72468a4",
-  "_resolved": "file:..\\d-115814-5776-9na1k7\\package.tgz",
-  "_from": "..\\d-115814-5776-9na1k7\\package.tgz",
+  "_resolved": "file:..\\d-115815-3460-68u3vb\\package.tgz",
+  "_from": "..\\d-115815-3460-68u3vb\\package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
