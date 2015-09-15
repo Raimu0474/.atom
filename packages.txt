@@ -31,4 +31,3 @@ script-runner@1.8.3
 seti-syntax@0.4.0
 seti-ui@0.8.0
 task-list@0.7.0
-
