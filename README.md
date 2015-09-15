@@ -1,1 +1,2 @@
-init
+RaimuEr's
+atom configs
