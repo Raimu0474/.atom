@@ -4,5 +4,10 @@
 packages/
 storage/
 compile-cache/
+.node-gyp/*
+.apm/*
+packages/*
+storage/*
+compile-cache/*
 init.coffee
 styles.less
